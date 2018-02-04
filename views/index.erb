@@ -1,12 +1,28 @@
 <h2>Welcome to Pizzashop</h2>
 
-<button class="btn btn-primary btn-large" onclick="something()"> Click! </button>
 
 <div class="row">
 <% @products.each do |p| %>
 	<div class="col-md-3">
-	<%= p.title %>
+		<div>
+			<%= p.title %>
+		</div>
+		<div>
+			<img src="<%= p.path_to_image %>" />
+		</div>
+		<div>
+			<%= p.description %>
+		</div>
+		<div>
+			Size: <%= p.size %> 
+		</div>
+		<div>
+			Price: <%= p.price %> rub
+		</div>
 	</div>
 <% end %>
-
 </div>
+ <br>
+<br>
+<p><button class="btn btn-primary btn-large" onclick="something()"> Click! </button>
+</p>
